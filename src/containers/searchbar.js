@@ -16,7 +16,7 @@ class SearchBar extends Component {
 		this.setState({
 			term: e.target.value
 		});
-	}
+	
 	onFormSubmit(e) {
 		e.preventDefault();
 		// hit the backend weather API

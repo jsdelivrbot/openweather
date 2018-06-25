@@ -1,7 +1,5 @@
 module.exports = {
-  entry: [
-    './src/index.js'
-  ],
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
     path: __dirname,
     publicPath: '/',
@@ -21,6 +19,9 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './',
+    headers: {
+        'Access-Control-Allow-Origin': '*'
+    },
   }
 };
